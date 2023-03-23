@@ -1,0 +1,341 @@
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css);
+@import url(https://fonts.googleapis.com/icon?family=Material+Icons);
+@import url(https://fonts.googleapis.com/css?family=Poppins);
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;  
+    font-family: 'Poppins' , sans-serif;
+}
+
+:root {
+    --bg-color: #E4FEFF;
+    --second-bg-color: #D5FDFF;
+    --text-color: #fff;
+    --second-text-color: #3d535f;
+    --main-color: #23D2E9;
+
+}
+
+html {
+    font-size: 100%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--bg-color);
+    color: var(--text-color);
+
+}
+
+.top-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem 10%;
+    background: var(--bg-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo {
+    display: flex;
+    font-size: 30px;
+    font-weight: 800;
+    color: var(--second-text-color);
+    letter-spacing: 3px;
+    cursor: pointer;
+    text-transform: uppercase;
+    
+}
+
+b {
+    font-size: 30px;
+    color: var(--main-color);
+
+}
+
+span {
+    color: var(--main-color);
+}
+
+.navbar a {
+    justify-content: space-around;
+    font-size: 1rem;
+    font-weight: 800;
+    margin-left: 4rem;
+    color: var(--second-text-color);
+}
+
+.navbar a:hover,
+.navbar a.active {
+    color: var(--main-color)
+}
+
+/* .navbar a::after {
+    content: '';
+    height: 3px;
+    width: 0;
+    background: var(--main-color);
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+}
+
+.navbar a:hover::after {
+    color: var(--main-color);
+    width: 100%;
+} */
+
+
+/* Home Section */
+
+section {
+    min-height: 100vh;
+    padding: 5rem 5% 3rem;
+}
+
+.home-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper {
+    display: flex;
+    width: 100%;    
+    height: 90vh;   
+    justify-content: center;
+    align-items: center;
+    padding: 0% 5%;
+    overflow: hidden;
+}
+
+.cols {
+    width: 50%;
+}
+
+.cols0 {
+    width: 90%;
+    z-index: 5;
+}
+
+.topline {
+    display: block;
+    position: relative;
+    font-size: 30px;
+    letter-spacing: 3px;
+    color: var(--second-text-color);
+}
+
+.topline::after {
+    position: absolute;
+    content: '';    
+    height: 4px;
+    width: 45px;
+    bottom: 10px;
+    background-color: var(--main-color);
+}
+
+.wrapper h1 {
+    display: block;
+    font-size: 4em;
+    font-weight: 800;
+    color: var(--second-text-color);
+}
+
+.multiText {
+    color: var(--main-color);
+    text-transform: capitalize;     
+}
+
+.wrapper p {
+    display: block;
+    width: 90%;
+    font-size: 1em;
+    color: var(--second-text-color);
+}
+
+.social-media a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 2rem;
+    height: 2rem;
+    background: transparent;
+    border: .2rem solid var(--main-color);
+    border-radius: 50%;
+    font-size: 1rem;
+    color: var(--main-color);
+    margin: 2rem 1rem 2rem 0;
+}
+
+.social-media a:hover {
+    background-color: var(--main-color);
+    color: var(--bg-color);
+    box-shadow: 0 0 1rem var(--main-color);
+}
+
+
+.btns {
+    width: 100%;
+    position: relative;
+    margin-top: 1rem;
+}
+
+.button {
+    outline: none;
+    border: none;
+    cursor: pointer;
+    border-radius: 4rem;
+    box-shadow: 0 0 1rem var(--main-color);
+    font-size: 13px;
+    font-weight: 800;
+    color: var(--second-text-color);
+    background-color: var(--main-color);
+    padding: 13px 1rem;
+    margin: 2rem 1rem 2rem 0;
+    letter-spacing: 2px;
+    text-transform: capitalize;
+}
+
+.button:hover {
+    box-shadow: none;
+}
+
+/* About Section */
+
+.about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    background-color: var(--bg-color);
+}
+
+.about-img img {
+    width: 35vw;
+}
+
+.heading {
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 800;
+}
+
+.about-me h2 {
+    text-align: left;
+    line-height: 1.5;
+    color: var(--second-text-color);
+}
+
+.about-me h3 {
+    font-size: 2rem;
+    font-weight: 200;
+    color: var(--second-text-color);
+}
+
+.about-me p {
+    font-size: 1.5rem;
+    font-weight: 200;
+    color: var(--second-text-color);
+    margin: 2rem 0 3rem;
+}
+
+/* Skills Section */
+
+.skills h2 {
+    margin-bottom: 5rem;
+    color: var(--second-text-color);
+}
+
+.skills-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    color: var(--second-text-color);
+}
+
+.skills-container .skills-set {
+    flex: 1 1 30rem;
+    background: var(--second-bg-color);
+    padding: 3rem 2rem 4rem;
+    border-radius: 2rem;
+    text-align: center;
+    border: .2rem solid var(--bg-color);
+    transition: 0.5s ease;
+}
+
+.skills-container .skills-set:hover {
+    transform: scale(1.05);
+    border-color: var(--main-color);
+}
+
+.skills-set i {
+    font-size: 2rem;
+    color: var(--second-text-color);
+}
+
+.skills-set h3 {
+    font-size: 2rem;
+}
+
+.skills-set p {
+    font-size: 1rem;
+    margin: 1rem 0 3rem;
+}
+
+/* Contact Section */
+
+.contact h2 {
+    margin-bottom: 3rem;
+    color: var(--second-text-color);
+}
+
+.contact form {
+    max-width: 70rem;
+    margin: 1rem auto;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.contact form .input-box {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.contact form .input-box input,
+.contact form textarea {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1rem;
+    color: var(--second-bg-color);
+    background-color: var(--second-text-color);
+    border-radius: 1rem;
+    margin: .5rem 0;
+}
+
+.contact form .input-box input {
+    width: 49%;   
+}
+
+.contact form textarea {
+    resize: none;
+}
+
+.contact form button {
+    margin-top: 2rem;
+    cursor: pointer;
+}
