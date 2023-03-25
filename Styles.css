@@ -80,6 +80,11 @@ span {
     color: var(--main-color)
 }
 
+#menu-icon {
+    font-size: 3rem;
+    color: var(--main-color);
+    display: none;
+}
 /* .navbar a::after {
     content: '';
     height: 3px;
@@ -338,4 +343,19 @@ section {
 .contact form button {
     margin-top: 2rem;
     cursor: pointer;
+}
+
+/* Footer Design */
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 2rem 9%;
+    background: var(--second-text-color);
+}
+
+.footer-text p {
+    font-size: 1rem;
 }
