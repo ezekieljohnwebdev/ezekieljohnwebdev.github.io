@@ -6,6 +6,21 @@ var typingEffect = new Typed(".multiText", {
     backDelay : 1500
 });
 
+// Navbar section
+let menuIcon = document.querySelector('#menu-icon');
+let navbar = document.querySelector('active');
+
+menuIcon.onClick = () => {
+    menuIcon.classList.toggle('fa-solid fa-x');
+    menuIcon.classList.toggle('active');
+};
+
+
+
+
+
+// scroll section
+
 let sections = document.querySelectorAll('section');
 let navLinks = document.querySelectorAll('header nav a');
 
