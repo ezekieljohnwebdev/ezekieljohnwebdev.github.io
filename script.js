@@ -1,3 +1,4 @@
+
 var typingEffect = new Typed(".multiText", {
     strings : ["Developer", "Virtual Assistant"],
     loop : true,
@@ -6,12 +7,14 @@ var typingEffect = new Typed(".multiText", {
     backDelay : 1500
 });
 
-// Navbar section
+
+// navbar section
+
 let menuIcon = document.querySelector('#menu-icon');
-let navbar = document.querySelector('active');
+let navbar = document.querySelector('.navbar');
 
 menuIcon.onClick = () => {
-    menuIcon.classList.toggle('fa-solid fa-x');
+    menuIcon.classList.toggle('fa-xmark');
     menuIcon.classList.toggle('active');
 };
 
@@ -38,5 +41,9 @@ window.onscroll = () => {
             });
         };
     });
+
+    let header = document.querySelector('header')
+
+    header.classList.toggle('sticky', window.scrollY > 100);    
 };
 
