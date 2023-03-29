@@ -13,7 +13,7 @@ var typingEffect = new Typed(".multiText", {
 let menuIcon = document.querySelector('#menu-icon');
 let navbar = document.querySelector('.navbar');
 
-menuIcon.onClick = () => {
+menuIcon.onclick = () => {
     menuIcon.classList.toggle('fa-x');
     menuIcon.classList.toggle('active');
 };
