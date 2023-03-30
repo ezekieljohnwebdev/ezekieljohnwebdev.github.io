@@ -14,13 +14,9 @@ let menuIcon = document.querySelector('#menu-icon');
 let navbar = document.querySelector('.navbar');
 
 menuIcon.onClick = () => {
-    menuIcon.classList.toggle('fa-x');
-    menuIcon.classList.toggle('active');
+    menuIcon.classList.toggle('fa-xmark');
+    navbar.classList.toggle('active');
 };
-
-
-
-
 
 // scroll section
 
