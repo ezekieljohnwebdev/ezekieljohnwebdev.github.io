@@ -13,9 +13,9 @@ var typingEffect = new Typed(".multiText", {
 let menuIcon = document.querySelector('#menu-icon');
 let navbar = document.querySelector('.navbar');
 
-menuIcon.onClick = () => {
-    menuIcon.classList.toggle('fa-xmark');
-    navbar.classList.toggle('active');
+menuIcon.onclick = () => {
+    menuIcon.classList.toggle('fa-x');
+    menuIcon.classList.toggle('active');
 };
 
 // scroll section
