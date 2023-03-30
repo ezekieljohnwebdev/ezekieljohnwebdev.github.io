@@ -14,9 +14,12 @@ let menuIcon = document.querySelector('#menu-icon');
 let navbar = document.querySelector('.navbar');
 
 menuIcon.onclick = () => {
-    menuIcon.classList.toggle('fa-x');
-    menuIcon.classList.toggle('active');
+    menuIcon.classList.toggle('fa-xmark');
+    navbar.classList.toggle('active');
 };
+
+menuIcon.classList.remove('fa-xmark');
+menuIcon.classList.remove('active');
 
 // scroll section
 
@@ -40,6 +43,7 @@ window.onscroll = () => {
 
     let header = document.querySelector('header')
 
-    header.classList.toggle('sticky', window.scrollY > 100);    
+    header.classList.toggle('sticky', window.scrollY > 100); 
+    
 };
 

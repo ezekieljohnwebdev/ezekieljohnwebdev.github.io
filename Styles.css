@@ -397,7 +397,7 @@ section {
         left: 0;
         width: 100%;
         padding: 1rem 3%;
-        background: var(--second-bg-color);
+        background: var(--bg-color);
         border-top: .1rem solid var(--bg-color);
         box-shadow: 0 .5rem 1rem var(--bg-color);
         display: none;
@@ -406,7 +406,7 @@ section {
     .navbar.active {
         display: block;
     }
-
+    
     .navbar a {
         display: block;
         font-size: 1rem;
