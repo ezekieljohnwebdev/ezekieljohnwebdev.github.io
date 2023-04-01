@@ -13,11 +13,14 @@
 }
 
 :root {
-    --bg-color: #E4FEFF;
-    --second-bg-color: #D5FDFF;
+    --bg-color: #202121;
+    --second-bg-color: #383F42;
+    --third-bg-color: #606A6E;
     --text-color: #fff;
-    --second-text-color: #3d535f;
-    --main-color: #23D2E9;
+    --second-text-color: #CAFFFF;
+    --main-color: #1BB6CB;
+    --other-color: #23D2E9;
+
 
 }
 
@@ -28,9 +31,8 @@ html {
 }
 
 body {
-    background: var(--bg-color);
+    background: var(--second-bg-color);
     color: var(--text-color);
-
 }
 
 .top-container {
@@ -58,7 +60,19 @@ body {
     letter-spacing: 3px;
     cursor: pointer;
     text-transform: uppercase;
-    
+    animation: slidetop 1s ease forwards;
+    opacity: 0;
+}
+
+@keyframes slidetop {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
 
 b {
@@ -77,36 +91,41 @@ span {
     font-weight: 800;
     margin-left: 4rem;
     color: var(--second-text-color);
+    animation: slideright .2s ease forwards;
+    opacity: 0;
+    animation-delay: calc(.2s* var(--clr));
+}
+
+@keyframes slideright {
+    0% {
+        transform: translateX(-100vh);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
 }
 
 .navbar a:hover,
 .navbar a.active {
-    color: var(--main-color)
+    color: var(--other-color)
 }
 
 #menu-icon {
     font-size: 3rem;
-    color: var(--main-color);
+    color: var(--other-color);
     display: none;
 }
-/* .navbar a::after {
-    content: '';
-    height: 3px;
-    width: 0;
-    background: var(--main-color);
-    position: absolute;
-    left: 0;
-    bottom: -10px;
-    transition: 0.5s;
-}
-
-.navbar a:hover::after {
-    color: var(--main-color);
-    width: 100%;
-} */
-
 
 /* Home Section */
+
+#home {
+    background-image: url(image/background.jpg);
+    background-size: cover;
+    background-position: top center;
+    position: relative;
+}
 
 section {
     min-height: 100vh;
@@ -141,10 +160,11 @@ section {
 .topline {
     display: block;
     position: relative;
-    font-size: 30px;
+    font-size: 3rem;
     letter-spacing: 3px;
     color: var(--second-text-color);
 }
+
 
 .topline::after {
     position: absolute;
@@ -157,20 +177,20 @@ section {
 
 .wrapper h1 {
     display: block;
-    font-size: 4em;
+    font-size: 4rem;
     font-weight: 800;
     color: var(--second-text-color);
 }
 
 .multiText {
-    color: var(--main-color);
+    color: var(--other-color);
     text-transform: capitalize;     
 }
 
 .wrapper p {
     display: block;
     width: 90%;
-    font-size: 1em;
+    font-size: 1.2rem;
     color: var(--second-text-color);
 }
 
@@ -189,7 +209,7 @@ section {
 }
 
 .social-media a:hover {
-    background-color: var(--main-color);
+    background-color: var(--other-color);
     color: var(--bg-color);
     box-shadow: 0 0 1rem var(--main-color);
 }
@@ -198,7 +218,7 @@ section {
 .btns {
     width: 100%;
     position: relative;
-    margin-top: 1rem;
+    margin-top: 3rem;
 }
 
 .button {
@@ -228,7 +248,7 @@ section {
     justify-content: center;
     align-items: center;
     gap: 2rem;
-    background-color: var(--bg-color);
+    background-color: var(--third-bg-color);
 }
 
 .about-img img {
@@ -282,13 +302,13 @@ section {
     padding: 3rem 2rem 4rem;
     border-radius: 2rem;
     text-align: center;
-    border: .2rem solid var(--bg-color);
+    border: .3rem solid var(--second-text-color);
     transition: 0.5s ease;
 }
 
 .skills-container .skills-set:hover {
     transform: scale(1.05);
-    border-color: var(--main-color);
+    border-color: var(--other-color);
 }
 
 .skills-set i {
@@ -306,6 +326,10 @@ section {
 }
 
 /* Contact Section */
+
+.contact {
+    background-color: var(--bg-color);
+}
 
 .contact h2 {
     margin-bottom: 3rem;
@@ -357,7 +381,7 @@ section {
     align-items: center;
     flex-wrap: wrap;
     padding: 2rem 9%;
-    background: var(--second-text-color);
+    background: var(--second-bg-color);
 }
 
 .footer-text p {
@@ -405,7 +429,7 @@ section {
         left: 0;
         width: 100%;
         padding: 1rem 3%;
-        background: var(--bg-color);
+        background: var(--third-bg-color);
         border-top: .1rem solid var(--bg-color);
         box-shadow: 0 .5rem 1rem var(--bg-color);
         display: none;
@@ -437,8 +461,9 @@ section {
         flex-direction: column-reverse;
     }
 
-    .about-img {
-        display: none;
+    .about-img img {
+        width: 80vw;
+        margin-top: 5rem;
     }
 
     .about-me .heading {

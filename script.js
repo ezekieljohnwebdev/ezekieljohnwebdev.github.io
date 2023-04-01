@@ -1,6 +1,6 @@
 
 var typingEffect = new Typed(".multiText", {
-    strings : ["Developer", "Virtual Assistant"],
+    strings : ["Front-End Developer", "Virtual Assistant"],
     loop : true,
     typeSpeed : 100,
     backSpeed : 80,
@@ -44,6 +44,20 @@ window.onscroll = () => {
     let header = document.querySelector('header')
 
     header.classList.toggle('sticky', window.scrollY > 100); 
-    
+
+    // Scroll Reveal
+
+    ScrollReveal({
+         reset: true,
+         distance: '80px',
+         duration: 2000,
+         delay: 200
+        
+        
+        
+        });
+
+    ScrollReveal().reveal('.tagline', { delay: 500 });
+
 };
 
