@@ -44,20 +44,18 @@ window.onscroll = () => {
     let header = document.querySelector('header')
 
     header.classList.toggle('sticky', window.scrollY > 100); 
+};
 
     // Scroll Reveal
 
     ScrollReveal({
-         reset: true,
+        //  reset: true,
          distance: '80px',
          duration: 2000,
-         delay: 200
-        
-        
-        
-        });
+         delay: 200,
+});
 
-    ScrollReveal().reveal('.tagline', { delay: 500 });
-
-};
-
+ScrollReveal().reveal('.wrapper, .heading', { origin: 'top' });
+ScrollReveal().reveal('.skills-container, .contact', { origin: 'bottom' });
+ScrollReveal().reveal('.wrapper h1, .about-img', { origin: 'left' });
+ScrollReveal().reveal('.wrapper p, .about-me', { origin: 'right' });
