@@ -21,6 +21,7 @@ menuIcon.onclick = () => {
 menuIcon.classList.remove('fa-xmark');
 menuIcon.classList.remove('active');
 
+
 // scroll section
 
 let sections = document.querySelectorAll('section');
@@ -45,6 +46,17 @@ window.onscroll = () => {
 
     header.classList.toggle('sticky', window.scrollY > 100); 
 };
+    // DarkMode
+   
+    let darkmodeicon = document.querySelector('#darkmode-icon');
+
+    darkmodeicon.onclick = () => {
+     darkmodeicon.classList.toggle('fa-sun');
+     darkmodeicon.classList.toggle('fa-moon');
+     document.body.classList.toggle('dark-mode');
+};
+
+
 
     // Scroll Reveal
 
@@ -54,6 +66,9 @@ window.onscroll = () => {
          duration: 2000,
          delay: 200,
 });
+
+
+
 
 ScrollReveal().reveal('.wrapper, .heading', { origin: 'top' });
 ScrollReveal().reveal('.skills-container, .contact', { origin: 'bottom' });
