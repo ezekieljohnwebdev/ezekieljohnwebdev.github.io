@@ -133,7 +133,7 @@ span {
 #home {
     background-image: url(image/background.jpg);
     background-size: cover;
-    background-position: top center;
+    background-position: center;
     position: relative;
 }
 
@@ -216,11 +216,11 @@ section {
     cursor: pointer;
     border-radius: 4rem;
     box-shadow: 0 0 1rem var(--main-color);
-    font-size: 13px;
+    font-size: 1rem;
     font-weight: 800;
     color: var(--second-text-color);
     background-color: var(--main-color);
-    padding: 13px 1rem;
+    padding: 1rem 1rem;
     margin: 2rem 1rem 2rem 0;
     letter-spacing: 2px;
     text-transform: capitalize;
@@ -229,6 +229,7 @@ section {
 .button:hover {
     box-shadow: none;
 }
+
 
 /* About Section */
 
@@ -307,7 +308,7 @@ section {
     padding: 3rem 2rem 4rem;
     border-radius: 2rem;
     text-align: center;
-    border: .3rem solid var(--second-text-color);
+    border: .2rem solid var(--second-text-color);
     transition: 0.5s ease;
 }
 
@@ -420,17 +421,27 @@ section {
 
 /* Footer Design */
 
-.footer .footer-text {
+.footer {
+    display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 2rem 9%;
-    background: var(--second-bg-color);
-}
-
-.footer-text p {
+    padding: 2rem 44%;
+    background: var(--bg-color);
+  }
+  
+  .footer-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .footer-text p {
     font-size: 1rem;
-}
-
+    font-weight: 800;
+    margin: 0;
+  }
+  
+  
 /* Breakpoint */
 @media (max-width: 1200px) {
     html {
@@ -461,9 +472,17 @@ section {
 
 }
 
-@media (max-width: 800px) {
+@media (max-width: 786px) {
     #menu-icon {
         display: block;
+    }
+
+    #darkmode-icon {
+        position: absolute;
+        right: 7rem;
+        font-size: 2.6rem;
+        color: var(--main-color);
+        margin-bottom: .1rem;
     }
 
     .navbar {
@@ -472,7 +491,7 @@ section {
         left: 0;
         width: 100%;
         padding: 1rem 3%;
-        background: var(--third-bg-color);
+        background: var(--text-color);
         border-top: .1rem solid var(--bg-color);
         box-shadow: 0 .5rem 1rem var(--bg-color);
         display: none;
@@ -534,54 +553,55 @@ section {
     }
     
 }
-
-@media (min-width: 576px) {
-    .contact-left {
-      flex-basis: 40%;
-      text-align: left;
+@media only screen and (max-width: 768px) {
+    /* Contact Design */
+    .contact-row {
+    flex-direction: column;
     }
-  
+    
+    .contact-left,
     .contact-right {
-      flex-basis: 60%;
+    flex-basis: 100%;
     }
-  
-    .contact-right .input-box input {
-      width: 100%;   
+    
+    .social-media a {
+    margin: 1rem 0;
     }
-  }
-  
-  @media (min-width: 768px) {
-    .contact-left {
-      flex-basis: 30%;
+    
+    /* Footer Design */
+    .footer {
+    padding: 2rem 10%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     }
-  
-    .contact-right {
-      flex-basis: 70%;
-    }
-  
-    .contact-right .input-box input {
-      width: 45%;   
-    }
-  
-    .contact-right form .input-box {
-      display: flex;
-      justify-content: space-between;
-    }
-  }
-  
-  @media (min-width: 992px) {
-    .contact-right .input-box input {
-      width: 48%;   
-    }
-  }
-
-
-@media (max-width: 450px) {
-    html {
+}
+    
+    @media only screen and (max-width: 480px) {
+    html{
         font-size: 50%;
     }
 
-    .contact form .input-box input {
-        width: 100%;
+    #darkmode-icon {
+        right: 3rem;
+    }
+
+    /* Contact Design */
+    .contact-left .heading {
+    text-align: center;
+    }
+    
+    .contact-right form .input-box {
+    display: block;
+    }
+    
+    .contact-right form .input-box input,
+    .contact-right form textarea {
+    width: 100%;
+    }
+    
+    /* Footer Design */
+    .footer-text p {
+    font-size: 0.8rem;
     }
 }
