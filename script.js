@@ -1,4 +1,26 @@
 
+// navbar section
+
+let menuIcon = document.querySelector('#menu-icon');
+let navbar = document.querySelector('.navbar');
+let body = document.querySelector('body');
+let darkModeIcon = document.querySelector('#darkmode-icon');
+
+menuIcon.onclick = () => {
+    menuIcon.classList.toggle('fa-times');
+    navbar.classList.toggle('active');
+};
+
+// Darkmode
+
+darkModeIcon.onclick = () => {
+    body.classList.toggle('dark-mode');
+    darkModeIcon.classList.toggle('fa-sun');
+    darkModeIcon.classList.toggle('fa-moon');
+};
+
+// Multitext
+
 var typingEffect = new Typed(".multiText", {
     strings : ["Front-End Developer", "Virtual Assistant"],
     loop : true,
@@ -6,20 +28,6 @@ var typingEffect = new Typed(".multiText", {
     backSpeed : 80,
     backDelay : 1500
 });
-
-
-// navbar section
-
-let menuIcon = document.querySelector('#menu-icon');
-let navbar = document.querySelector('.navbar');
-
-menuIcon.onclick = () => {
-    menuIcon.classList.toggle('fa-xmark');
-    navbar.classList.toggle('active');
-};
-
-menuIcon.classList.remove('fa-xmark');
-menuIcon.classList.remove('active');
 
 
 // scroll section
@@ -46,18 +54,7 @@ window.onscroll = () => {
 
     header.classList.toggle('sticky', window.scrollY > 100); 
 };
-    // DarkMode
-   
-    let darkmodeicon = document.querySelector('#darkmode-icon');
-
-    darkmodeicon.onclick = () => {
-     darkmodeicon.classList.toggle('fa-sun');
-     darkmodeicon.classList.toggle('fa-moon');
-     document.body.classList.toggle('dark-mode');
-};
-
-
-
+  
     // Scroll Reveal
 
     ScrollReveal({

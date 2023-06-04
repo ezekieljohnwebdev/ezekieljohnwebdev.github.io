@@ -590,6 +590,11 @@ section {
     .contact-left .heading {
     text-align: center;
     }
+
+    .contact-left .p {
+        font-size: 5rem;
+        font-weight: 800;
+    }
     
     .contact-right form .input-box {
     display: block;
